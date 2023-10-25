@@ -20,8 +20,14 @@ def encode(password):
     return output
 
 def decode(password):
-    # ADD HERE!
-    pass
+    de_pass = []
+    for digit in password:
+        digit = int(digit)
+        digit -= 3
+        digit = str(digit)
+        de_pass.append(digit)
+    return ''.join(de_pass)
+
 
 if __name__ == "__main__":
     # SETUP
